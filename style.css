@@ -148,6 +148,7 @@ section .title::after {
     transform: translateX(-50%);
 }
 
+.services .title::after,
 .about .title::after {
     content: "who i am";
 }
@@ -207,6 +208,86 @@ section .title::after {
     color: crimson;
 }
 
+
+/*service*/
+
+.services .title::after {
+    content: "learn";
+    background: #111;
+}
+
+.services .content-services {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services {
+    color: #ffff;
+    background: #111;
+}
+
+.services .title::before {
+    background: #fff;
+}
+
+.services .content-services .card {
+    width: calc(33% - 20px);
+    text-align: center;
+    background: #222;
+    padding: 30px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    margin-top: 20px;
+}
+
+.services .content-services .card .text {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 12px 0 10px 0;
+}
+
+.services .content-services .card p {
+    margin: 10px 0;
+}
+
+.services .content-services .card a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+}
+
+.services .content-services .card a:hover {
+    color: #000;
+}
+
+.services .content-services .card:hover {
+    background: crimson;
+}
+
+.services .content-services .card .box {
+    transition: all 0.6s ease;
+}
+
+.services .content-services .card .box:hover {
+    transform: scale(1.08);
+}
+
+.services .content-services .card .box img {
+    width: 100px;
+}
+
+.services .content-services .card .text {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
 @media (max-width: 546px) {
     .max-width {
         padding: 0 40px;
@@ -219,6 +300,9 @@ section .title::after {
     }
     .home .max-width .content-home .text-3 {
         font-size: 250px;
+    }
+    .services .content-services .card {
+        flex: 100%;
     }
 }
 
@@ -281,5 +365,9 @@ section .title::after {
     }
     .about .content-about .right {
         flex: 100%;
+    }
+    .services .content-services .card {
+        width: calc(50% - 25px);
+        flex-direction: column;
     }
 }
